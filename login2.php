@@ -1,7 +1,6 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <body>
-mint
 <?php
 	$hostname="localhost";
 	$username="root";
@@ -12,41 +11,43 @@ mint
 	$upass=$_POST['pass'];
 	@mysql_connect($hostname,$username,$password)or die("Connect Fail");
 	@mysql_select_db($database)or die("Select fail");
-	$query= "select* from user";
+	$query= "Select * from user where user_name= '$uname' and pass='$upass'";
 	$result=mysql_query($query);
-
-
+	$num_result=@mysql_num_rows($result);	
 	
+		
+		if($num_result!=1){
+?>
+	     <script language="JavaScript">
+        alert("รหัสไม่ถูกต้อง หรือ ยังไม่มีอยู่ในระบบ \nกรุณาลองใหม่อีกครั้ง หรือติดต่อเจ้าหน้าที่ \nเพื่อดำเนินการต่อไป ......  ^_^\n ");
+        window.location.href = "index.php";
+       </script>
+<?php
+		
+	}else{
 		while($row=mysql_fetch_array($result))
 			{
 				$id=$row['user_id'];
-				$username=$row['username'];
+				$user=$row['user_name'];
 				$first=$row['first'];
 				$last=$row['last'];
 				$email=$row['email'];
 				$pass=$row['pass'];
 			}
-		echo"$id $uname $pass";
-		if($uname=="$username" && $upass=="$pass"){
+		//echo"$id $user $first $last $email $pass";
 ?>
-		 <script language="JavaScript">
-        alert("สวัสดีครับ คุณ <?=$first =$pass?> ยินดีต้อนรับเข้าสู่ระบบครับ");
+		
+       <script language="JavaScript">
+        alert("สัวสดีค่ะ คุณ<?=$first?> ยินดีต้อนรับเข้าสู่ระบบค่ะ");
         //window.location.href = "member.php"; //ส่ง user ไำปยังหน้าที่เราต้องการ
-       </script>
+        </script>
 		
-
-<?php
-		
-	}else{
-?>
-		<script language="JavaScript">
-        alert("รหัสไม่ถูกต้อง หรือ ยังไม่มีอยู่ในระบบ \r\n\r\nกรุณาลองใหม่อีกครั้ง หรือติดต่อเจ้าหน้าที่ \r\n\r\nเพื่อดำเนินการต่อไป ......  ^_^\r\n\r\n ");
-        window.location.href = "index.php";
-       </script>
       
 <?php
 	}
+	
 			      
 ?>
+
 </body>
 </html>
