@@ -7,7 +7,7 @@
 <body>
 
 
-<form action="login2.php" method="post">
+<form action="file:///D|/xampp/htdocs/Work/login2.php" method="post">
 <center> <h1>Login </h1></center>
 <center> Username : <input type="text" name="uname"><br/></center>
 <center>Password : <input type="password" name="pass"><br></center>
