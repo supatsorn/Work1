@@ -1,10 +1,10 @@
 <?php
-include("file:///D|/xampp/htdocs/Work/connect_db.php");
-$rname = $_GET["rname"];
-$message = $_GET["message"];
-$sender = $_GET["sender"];
 
-	/*$objConnect = mysql_connect("localhost","root","") or die("Error Connect to Database");*/
+$rname = $_POST["$recip"];
+$message = $_POST["&message"];
+$sender = $_POST["&sender"];
+echo "$rname ";
+	$objConnect = mysql_connect("localhost","root","") or die("Error Connect to Database");
 	$objDB = mysql_select_db("work1");
 	$strSQL = "INSERT INTO message ";
 	$strSQL .="(recipients,message,sender)";
