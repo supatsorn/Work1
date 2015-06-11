@@ -1,0 +1,47 @@
+<html>
+<head>
+
+</head>
+<style type="text/css">
+body{
+     margin:0
+	 }
+.box0{
+	width:auto;
+	height:auto;
+	margin:10px;
+	background-color: #FF9999;
+	border: thick solid #F09;
+	  }
+.box1{
+	
+	width:auto;
+	height:auto;
+	padding: 100px;
+	background:#CEE7FF;
+	border:#93C9FF solid 3px;
+	margin:10px;
+	text-align: center;
+	font-size: 36px;
+	color: #900;
+	
+	  }
+.box2{
+	background-color: #6F3;
+	padding: 100px;
+	height: auto;
+	width: auto;
+	margin:10px;
+	border: medium solid #0C3;
+	  }
+.box3{
+	background-color:#FC0;
+	padding : 100px;
+	height: auto;
+	width: auto;
+	margin:10px;
+	border: medium solid #F30;
+	  }
+
+	  </style> 
+</html>

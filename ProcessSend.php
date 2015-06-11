@@ -1,5 +1,14 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+mint sever
+</title>
+</head>
+<body>
 <?php
-include("connect_db.php");
+include("file:///D|/xampp/htdocs/Work/connect_db.php");
+mysql_query("SET NAMES UTF8");
 	$rname = $_POST["to"];
 	$message = $_POST["mass4"];
 	$sender = $_POST["from"];
@@ -81,3 +90,5 @@ include("connect_db.php");
 	
 	mysql_close();
 ?>
+</body>
+</html>

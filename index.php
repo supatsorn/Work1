@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
 mint sever
 </title>
@@ -7,6 +8,7 @@ mint sever
 <body>
 <?php
 include("file:///D|/xampp/htdocs/Work/connect_db.php");
+mysql_query("SET NAMES UTF8");
 $query="select * from message where sender!='mint'";
 $resule=mysql_query($query);
 ?>

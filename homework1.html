@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mint</title>
+<link type="text/css" rel="stylesheet" href="file:///D|/xampp/htdocs/Work/Mystyle.css">
+</head>
+
+<body>
+<script language="javascript">
+function setNum(){
+	
+var val= parseInt(document.getElementById("num").value);
+alert(document.getElementById("num").val);
+//alert(value);
+var n;
+     n=value/3;
+
+	//alert(n);
+		if(num==0){
+
+			document.getElementById("number").value=value;
+			document.getElementById("num").style.backgroundColor="blue";
+			}
+		else if(num==1){
+			document.getElementById("number").value=value;
+			document.getElementById("num").style.backgroundColor="red";
+			}
+		else if(num==2){
+			document.getElementById("number").value=value;
+			document.getElementById("num").style.backgroundColor="yellow";
+			}
+}
+
+</script>
+<div class="box0">
+<form id="form1" name="form1" method="post" action="" >
+  <center><h1>ใส่ค่าตัวเลข</h1>
+    
+      <p>
+        <input type="text" name="num" id="num" />
+        
+      </p>
+      <p>
+        <label for="number"></label>
+        <input type="text" name="number" id="number">
+        <input type="button" name="OK" value="OK" onClick="setNum()" />
+      </p>
+      <p>&nbsp;</p>
+  </center>
+  
+</form></div>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+</body>
+</html>
