@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<style type="text/css">
+	
+	div{
+		width:auto;
+	height:auto;
+	padding: 35px;
+	background:#FF9999;
+	border:#FFFFCC solid 3px;
+	margin:10px;
+	text-align: center;
+	font-size: 36px;
+	color: #900;
+	}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	//$("div").remove();
+	$("#num").keyup(function(){
+        $("div").css("background-color", "red");
+        var n=$( ".i").val();
+		console.log(n);
+		var x=n%3;
+		if (x==0){
+			$("#div1").css("background-color", "green");
+			$("#div2").css("background-color", "yellow");
+			$("#div3").css("background-color", "green");
+		}else if(x==1){
+			$("#div1").css("background-color", "yellow");
+			$("#div2").css("background-color", "green");
+			$("#div3").css("background-color", "yellow");
+
+		}else if(x==2){
+			$("#div1").css("border", "white");
+			$("#div1").css("background-color", "white");
+			$("#div2").css("border", "white");
+			$("#div2").css("background-color", "white");
+			$("#div3").css("border", "white");
+			$("#div3").css("background-color", "white");
+		}
+    });
+	
+		     
+});
+
+
+</script>
+</head>
+<body>
+<form method="post" action="">
+<center><input type="text" id="num" class="i"></center>
+</form>
+<div class="box0" id="div1" class="bar"></div>
+<div class="box0" id="div2"></div>
+<div class="box0" id="div3"></div>
+
+</body>
+</html>
